@@ -112,6 +112,64 @@
                   required
                 />
               </div>
+
+              <div class="form-group">
+                <label for="project-type-input">Project Type</label>
+                <select class="form-control" id="project-type-input">
+                  <option selected disabled>Pick one...</option>
+                  <option value="Web Application (Front End)">
+                    Web Application (Front End)
+                  </option>
+                  <option value="Web Application (Back End)">
+                    Web Application (Back End)
+                  </option>
+                  <option value="Web Application (Full Stack)">
+                    Web Application (Full Stack)
+                  </option>
+                  <option value="Mobile Application">Mobile Application</option>
+                  <option value="Print Campaign">Print Campaign</option>
+                  <option value="Digital Marketing Campaign">
+                    Digital Marketing Campaign
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="hourly-rate-input">Hourly Rate ($)</label>
+                <input
+                  type="number"
+                  id="hourly-rate-input"
+                  class="form-control"
+                  placeholder="$"
+                  min="0"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="due-date-input">Due Date</label>
+                <input
+                  type="text"
+                  min="1"
+                  id="due-date-input"
+                  class="form-control"
+                  placeholder="WHen is the project due?"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn custom-btn">
+                Submit Project Info
+              </button>
             </div>
           </form>
         </div>
