@@ -1,5 +1,6 @@
 // save reference to  important DOM elements
 var timeDisplayEl = $("#time-display");
+var dueDateInputEl = $("#due-date-input");
 
 // handle displaying the time
 function displayTime() {
@@ -7,5 +8,7 @@ function displayTime() {
   //   console.log(rightNow);
   timeDisplayEl.text(rightNow);
 }
+
+dueDateInputEl.datepicker({ mindDate: 1 });
 
 setInterval(displayTime, 1000);
