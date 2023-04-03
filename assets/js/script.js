@@ -39,7 +39,10 @@ function printProjectData(name, type, hourlyRate, dueDate) {
   var totalTdEl = $("<td>")
     .addClass("p-2")
     .text("$" + totalEarnings);
-  console.log(totalTdEl);
+
+  var deleteProjectBtn = $("<td>")
+    .addClass("p-2 delete-project-btn text center")
+    .text("X");
 
   // By listing each `<td>` variable as an argument, each one will be appended in that order
   projectRowEl.append(
@@ -48,7 +51,8 @@ function printProjectData(name, type, hourlyRate, dueDate) {
     rateTdEl,
     dueDateTdEl,
     daysLeftTdEl,
-    totalTdEl
+    totalTdEl,
+    deleteProjectBtn
   );
 
   projectDisplayEl.append(projectRowEl);
@@ -63,6 +67,13 @@ function calculateTOtalEarnings(rate, days) {
   var total = dailyTotal * days;
   //   console.log(total);
   return total;
+}
+
+//functionality to delete project
+function handleDeleteProject(event) {
+  console.log(event.target);
+  var btnClicked = $(event.target);
+  btnClicked.parent("tr").remove();
 }
 
 //handle project form submission
@@ -82,6 +93,7 @@ function handleProjectFormSubmit(event) {
 }
 
 projectFormEl.on("submit", handleProjectFormSubmit);
+projectDisplayEl.on("click", ".delete-project-btn", handleDeleteProject);
 dueDateInputEl.datepicker({ mindDate: 1 });
 
 setInterval(displayTime, 1000);
