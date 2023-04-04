@@ -17,7 +17,7 @@ This is a project tracker application which allows to add the name of project, t
 <img src = "assets/images/pic-1.png" width ="300">
 <img src =  "assets/images/pic-2.png" width ="300">
 
-## https://kartavya99.github.io/Project-Tracker-Bootstrap-JQuery-and-JQue
+## Link to App => [Live](https://kartavya99.github.io/Project-Tracker-Bootstrap-JQuery-and-JQueryUI/)
 
 ## Technologies and Librarie
 
